@@ -1,0 +1,20 @@
+AccessModifierOffset: -4
+AllowAllParametersOfDeclarationOnNextLine: false
+AllowShortIfStatementsOnASingleLine: false
+AlignOperands: true
+AlignTrailingComments: true
+AlwaysBreakAfterReturnType: All
+AlwaysBreakTemplateDeclarations: true
+BasedOnStyle: LLVM
+BinPackArguments: true
+BinPackParameters: true
+BreakConstructorInitializers: AfterColon
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
+IndentCaseLabels: false
+IndentWidth : 4
+Language: Cpp
+#PenaltyBreakBeforeFirstCallParameter: 10000
+#PenaltyBreakAssignment: 10100
+SortIncludes: false
+TabWidth: 4
+UseTab: ForContinuationAndIndentation

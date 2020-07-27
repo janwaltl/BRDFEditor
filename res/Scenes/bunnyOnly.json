@@ -1,0 +1,30 @@
+{
+	"camera": {
+		"position": [ 0.0, 1.0, 2.0 ],
+		"targetPos": [ 0.0, 0.0, 0.0 ],
+		"up": [ 0.0, 1.0, 0.0 ]
+	},
+	"BRDFs": [
+		{
+			"name": "CookTorrance",
+			"filename": "BRDF/CookTorrance.cl"
+		}
+	],
+	"materials": [
+		{
+			"name": "CookTorrance",
+			"BRDF": "CookTorrance"
+		}
+	],
+	"lights": [],
+	"envMap": "HDR/cape_hill_2k.hdr",
+	"objects": [
+		{
+			"name": "Bunny",
+			"type": "mesh",
+			"position": [ 0.0, 0.0, 0.0 ],
+			"material": "CookTorrance",
+			"filename": "Models/bunny.obj"
+		}
+	]
+}

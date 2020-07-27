@@ -1,0 +1,81 @@
+{
+	"camera": {
+		"position": [ 0.0, 1.0, 4.0 ],
+		"targetPos": [ 0.0, 1.0, 0.0 ],
+		"up": [ 0.0, 1.0, 0.0 ]
+	},
+	"BRDFs": [
+		{
+			"name": "BlinnPhong",
+			"filename": "BRDF/BlinnPhong.cl"
+		},
+		{
+			"name": "CookTorrance",
+			"filename": "BRDF/CookTorrance.cl"
+		},
+		{
+			"name": "Lambert",
+			"filename": "BRDF/Lambert.cl"
+		},
+		{
+			"name": "Ashikhmin_Shierly",
+			"filename": "BRDF/Ashikhmin-Shierly.cl"
+		}
+	],
+	"materials": [
+		{
+			"name": "Ashikhmin_Shierly-Iso",
+			"BRDF": "Ashikhmin_Shierly"
+		},
+		{
+			"name": "CookTorrance",
+			"BRDF": "CookTorrance"
+		},
+		{
+			"name": "Lambert",
+			"BRDF": "Lambert"
+		},
+		{
+			"name": "Ashikhmin_Shierly-Aniso",
+			"BRDF": "Ashikhmin_Shierly"
+		}
+	],
+	"lights": [
+		
+	],
+	"envMap": "HDR/cape_hill_2k.hdr",
+	"envMapIntensity": 1.0,
+	"objects": [
+		{
+			"name": "LeftSphere",
+			"type": "sphere",
+			"material": "Lambert",
+			"center": [ 2.0, 2.0, 0.0 ],
+			"radius": 2.0
+		},
+		{
+			"name": "RightSphere",
+			"type": "sphere",
+			"material": "Lambert",
+			"center": [ -2.0, 1.0, 0.0 ],
+			"radius": 1.0
+		},
+		{
+			"name": "Floor",
+			"type": "plane",
+			"material": "Lambert",
+			"position": [0.0, 0.0, 0.0],
+			"normal": [0.0, 1.0, 0.0]
+		},
+		{
+			"name": "MiddleBox",
+			"type": "cuboid",
+			"material": "Lambert",
+			"cornerPoint": [2.0, -2.0, 0.0],
+			"dims": [1.0, 2.5, 1.5],
+			"pitch": 0.0,
+			"yaw": 45.0,
+			"roll": 0.0
+		}
+	]
+}

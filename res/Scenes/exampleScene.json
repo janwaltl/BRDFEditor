@@ -1,0 +1,37 @@
+{
+	"camera": {
+		"position": [ 0.0, 0.0, 2.0 ],
+		"targetPos": [ 0.0, 0.0, 0.0 ],
+		"up": [ 0.0, 1.0, 0.0 ] },
+	"BRDFs": [{
+			"name": "OrenNayar",
+			"filename": "BRDF/Oren-Nayar.cl"},
+		{   "name": "CookTorrance",
+			"filename": "BRDF/CookTorrance.cl"},
+		[...]],
+	"materials": [{
+			"name": "OrenNayar",
+			"BRDF": "OrenNayar"},
+		{	"name": "CookTorrance",
+			"BRDF": "CookTorrance"},
+		{	"name": "CookTorrance2",
+			"BRDF": "CookTorrance"}, 
+		[...]],
+	"lights": [{
+			"name": "First",
+			"type": "area",
+			"position": [ 2.0, 2.0, 1.0 ],
+			"halfSize": 1.0,
+			"normal": [ -1.0, -1.0, 1.0 ],
+			"color": [ 1.0, 1.0, 1.0 ],
+			"strength": 10},
+		[...] ],
+	"objects": [{
+			"name": "LeftSphere",
+			"type": "sphere",
+			"material": "CookTorrance",
+			"center": [ 1.0, 0.0, 0.0 ],
+			"radius": 0.5
+		},
+		[...] ]
+}

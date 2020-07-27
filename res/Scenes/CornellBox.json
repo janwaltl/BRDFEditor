@@ -1,0 +1,124 @@
+{
+	"camera": {
+		"position": [ 0.0, 1.0, 2.0 ],
+		"targetPos": [ 0.0, 1.0, 0.0 ],
+		"up": [ 0.0, 1.0, 0.0 ]
+	},
+	"BRDFs": [
+		{
+			"name": "CookTorrance",
+			"filename": "BRDF/CookTorrance.cl"
+		},
+		{
+			"name": "Lambert",
+			"filename": "BRDF/Lambert.cl"
+		}
+	],
+	"materials": [
+		{
+			"name": "CookTorrance",
+			"BRDF": "CookTorrance"
+		},
+		{
+			"name": "Green",
+			"BRDF": "Lambert"
+		},
+		{
+			"name": "Red",
+			"BRDF": "Lambert"
+		},
+		{
+			"name": "White",
+			"BRDF": "Lambert"
+		},
+		{
+			"name": "LambertObj",
+			"BRDF": "Lambert"
+		}
+	],
+	"lights": [
+		{
+			"name": "L4",
+			"type": "sphere",
+			"position": [ 0.0, 1.8, -1.0 ],
+			"radius": 0.2,
+			"color": [ 1.0, 1.0, 1.0 ],
+			"strength": 50
+		},
+		{
+			"name": "L4",
+			"type": "sphere",
+			"position": [ 0.0, 0.1, 0.0 ],
+			"radius": 0.1,
+			"color": [ 1.0, 1.0, 1.0 ],
+			"strength": 50
+		}
+	],
+	//"envMap": "HDR/studio_small_03_1k.hdr",
+	//"envMapIntensity":0.0,
+	"objects": [
+		{
+			"name": "RightSphere",
+			"type": "sphere",
+			"material": "Red",
+			"center": [ 1.0, 0.0, -1.0 ],
+			"radius": 0.3
+		},
+		{
+			"name": "LeftSphere",
+			"type": "sphere",
+			"material": "CookTorrance",
+			"center": [ -0.8, 0.2, -1.0 ],
+			"radius": 0.5
+		},
+		{
+			"name": "Floor",
+			"type": "plane",
+			"material": "White",
+			"position": [0.0, -0.3, 0.0],
+			"normal": [0.0, 1.0, 0.0]
+		},
+		
+		{
+			"name": "BackSize",
+			"type": "plane",
+			"material": "White",
+			"position": [0.0, -0.3, -3.0],
+			"normal": [0.0, 0.0, 1.0]
+		},
+		{
+			"name": "LeftSide",
+			"type": "plane",
+			"material": "Green",
+			"position": [-1.5, -0.3, -3.0],
+			"normal": [1.0, 0.0, 0.0]
+		},
+		{
+			"name": "RightSide",
+			"type": "plane",
+			"material": "Red",
+			"position": [1.5, -0.3, -3.0],
+			"normal": [-1.0, 0.0, 0.0]
+		},
+		{
+			"name": "RightBox",
+			"type": "cuboid",
+			"material": "LambertObj",
+			"cornerPoint": [0.5, -0.3, -2.0],
+			"dims": [0.7, 1.0, 0.7],
+			"pitch": 0.0,
+			"yaw": 45.0,
+			"roll": 0.0
+		},
+		{
+			"name": "Leftbox",
+			"type": "cuboid",
+			"material": "LambertObj",
+			"cornerPoint": [-0.5, -0.3, -2.1],
+			"dims": [0.7, 1.5, 0.7],
+			"pitch": 0.0,
+			"yaw": 0.0,
+			"roll": 0.0
+		}
+	]
+}

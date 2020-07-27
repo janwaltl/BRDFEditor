@@ -1,0 +1,74 @@
+{
+	"camera": {
+		"position": [ 0.0, 0.0, 2.0 ],
+		"targetPos": [ 0.0, 0.0, 0.0 ],
+		"up": [ 0.0, 1.0, 0.0 ]
+	},
+	"BRDFs": [{
+			"name": "Lambert",
+			"filename": "BRDF/Lambert.cl"
+		},
+		{
+			"name": "Ash",
+			"filename": "BRDF/Ashikhmin-Shierly.cl"
+		},
+		{
+			"name": "Cook",
+			"filename": "BRDF/CookTorrance.cl"
+		},
+		{
+			"name": "Oren",
+			"filename": "BRDF/Oren-Nayar.cl"
+		}
+	],
+	"materials": [{
+			"name": "Lambert",
+			"BRDF": "Lambert"
+		}],
+	"lights": [{
+			"name": "First",
+			"type": "area",
+			"position": [ 2.0, 2.0, 1.0 ],
+			"halfSize": 1.0,
+			"normal": [ -1.0, -1.0, 0.0 ],
+			"color": [ 1.0, 1.0, 1.0 ],
+			"strength": 10
+		},{
+			"name": "Second",
+			"type": "area",
+			"position": [ -2.0, 2.0, 1.0 ],
+			"halfSize": 1.0,
+			"normal": [ 1.0, -1.0, 0.0 ],
+			"color": [ 1.0, 1.0, 1.0 ],
+			"strength": 10
+		}],
+	"objects": [{
+			"name": "LeftSphere",
+			"type": "sphere",
+			"material": "Lambert",
+			"center": [ 1.0, 0.0, 0.0 ],
+			"radius": 0.5
+		},{
+			"name": "RightSphere",
+			"type": "sphere",
+			"material": "Lambert",
+			"center": [ -1.0, 0.0, 0.0 ],
+			"radius": 0.5
+		},{
+			"name": "Floor",
+			"type": "plane",
+			"material": "Lambert",
+			"position": [0.0, -0.5, 0.0],
+			"normal": [0.0, 1.0, 0.0]
+		},{
+			"name": "MiddleBox",
+			"type": "cuboid",
+			"material": "Lambert",
+			"cornerPoint": [0.0, -0.5, 0.0],
+			"dims": [0.3, 0.3, 0.3],
+			"pitch": 0.0,
+			"yaw": 0.0,
+			"roll": 0.0
+		}
+	]
+}
