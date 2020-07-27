@@ -1,3 +1,4 @@
+
 # **BRDF Editor**
 BRDF Editor is an application for rapid prototyping of BRDF functions. 
 It is capable of rendering with various algorithms - from direct-lighting only to full path tracing with area lights and MIS.
@@ -20,7 +21,11 @@ written BRDFs.
 8. Implementation of the path tracing algorithm and a couple of
 well-known BRDFs.
 
-## Quickstart
+# LICENSE
+My code is released under MIT license, `external/` and `glfw-3.2.1` contain external libraries with their own licenses. Same goes for the Standford Bunny model in
+`res/Models`.
+
+# Quickstart
 ### Prerequisites:
 - CMAKE or Visual Studio 2017+ which can open CMAKE projects.
 - A device with OpenCL 1.2 support and up-to-date drivers.
@@ -54,6 +59,4 @@ Note that the application might freeze for a second while the kernels are compil
 ![](imgs/OverGraphs.png "Graph capabilities")
 More information can be found in `poster.pdf` I made for the presentation.
 
-# LICENSE
-My code is released under MIT license, `external/` and `glfw-3.2.1` contain external libraries with their own licenses. Same goes for the Standford Bunny model in
-`res/Models`.
+
